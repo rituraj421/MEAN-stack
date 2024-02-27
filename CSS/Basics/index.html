@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        hgroup{
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        h1,h2{
+            font-size: 180%;
+            font-family: verdana;
+        }
+        h1{
+            color: rgb(96, 72, 36);
+            word-spacing: 0.3em;
+            /* background-position: 300px 0px; */
+        }
+        h2{
+            text-transform: uppercase;
+            /* text-indent: 400px; */
+        }
+        /* selectors */
+
+        p > *{
+            color: red;
+        }
+        /* pseudo elements */
+        p::first-line{
+            color: red;
+        }
+        ul::first-line{
+            color: red;
+        }
+        hgroup:active{
+            font-size: 100px;
+        }
+
+        /* page layout */
+        #one{
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            z-index: -1;
+            background-color: white;
+        }
+        #two{
+            position: relative;
+            z-index: 2;
+            background-color: bisque;
+
+        }
+        #three{
+            background-color: aqua;
+        }
+
+        /* transformers */
+        .flip3d{
+            width: 240px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+        }
+        .flip3d > .front{
+            position: absolute;
+            transform: perspective(600px) rotateY( '0deg');
+            background: #fc0;
+            width: 240px;
+            height: 200px;
+            border-radius: 7px;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+        }
+        .flip3d > .back{
+            position: absolute;
+            transform: perspective(600px) rotateY( '180deg');
+            background: rgb(114, 113, 108);
+            width: 240px;
+            height: 200px;
+            border-radius: 7px;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+        }
+        .flip3d:hover > .front{
+            transform: perspective(600px) rotateY('-180deg');
+        }
+        .flip3d:hover > .back{
+            transform: perspective(600px) rotateY('0deg');
+        }
+    </style>
+</head>
+<body>
+    <hgroup class="ritu">
+        <h1>First headline</h1>
+        <h2>Subtitle Headline</h2>
+    </hgroup>
+
+    <article>
+        <p>Hey this is article</p>
+    </article>
+
+    <p>new one</p>
+    <p>hey <u>there</u></p>
+
+    <p>my paragraph keeps on going on <br> ..keeps going <br> still going</p>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+
+    <hr color="black">
+    <!-- page layout -->
+    <p id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum pariatur ullam saepe sequi tempore incidunt. Aut pariatur quam necessitatibus sapiente, incidunt consectetur cum mollitia voluptatibus laudantium sed. Beatae, illum nihil? Pariatur, odit amet.</p>
+    <p id="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum pariatur ullam saepe sequi tempore incidunt. Aut pariatur quam necessitatibus sapiente, incidunt consectetur cum mollitia voluptatibus laudantium sed. Beatae, illum nihil? Pariatur, odit amet.</p>
+    <p id="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum pariatur ullam saepe sequi tempore incidunt. Aut pariatur quam necessitatibus sapiente, incidunt consectetur cum mollitia voluptatibus laudantium sed. Beatae, illum nihil? Pariatur, odit amet.</p>
+
+<hr color="black">
+    <!-- transformers -->
+    <div class="flip3d">
+        <div class="back">box 1 - back</div>
+        <div class="front">box 1 - front</div>
+    </div>
+
+    <div class="flip3d">
+        <div class="back">box 2 - back</div>
+        <div class="front">box 2 - front</div>
+    </div>
+
+    <div class="flip3d">
+        <div class="back">box 3 - back</div>
+        <div class="front">box 3 - front</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+#shape {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border: 2px solid black;
+  animation: colorchange 5s infinite;
+  margin: auto;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes colorchange {
+  0% {
+    background: red;
+    border-radius: 0;
+  }
+  25% {
+    background: yellow;
+    border-radius: 25%;
+  }
+  50% {
+    background: blue;
+    border-radius: 50%;
+  }
+  75% {
+    background: green;
+    border-radius: 75%;
+  }
+  100% {
+    background: red;
+    border-radius: 100%;
+  }
+}

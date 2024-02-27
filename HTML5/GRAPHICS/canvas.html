@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Here</title>
+    <link rel="stylesheet" href="canvas.css">
+  </head>
+  
+  <body>
+    <canvas id="myCanvas" width="300" height="400"></canvas>
+  </body>
+  <script>
+    function draw(){
+        // alert("hey");
+        var ctx = document.getElementById('myCanvas').getContext('2d');
+        // alert(ctx.canvas.id+" | " + ctx.canvas.width);
+        ctx.fillStyle = "magenta";
+        ctx.fillRect(20,20,100,200);
+        ctx.fillRect(200,200,50,50);
+        ctx.strokeRect(20,20,100,100);
+        ctx.strokeRect(200,200,50,100);
+        // ctx.clearRect(0,0,100,100);
+    }
+    window.onload = draw;
+  </script>
+</html>

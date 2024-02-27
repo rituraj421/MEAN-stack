@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+
+<style>
+    .container::-webkit-scrollbar {
+  background-color: limegreen; 
+  width: 13px;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color:lightgrey;
+    border-radius:10px;
+    box-shadow:inset 0 0 10px #000000;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color:limegreen;
+    border-radius:16px;
+    box-shadow:inset 0 0 10px #000000;
+}
+
+.container {
+  height: 200px;
+  width: 300px;
+  min-width: 150px;
+  background-color: limegreen; 
+  margin: auto auto auto auto;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.overflow {
+  min-width: 350px;
+  min-height: 250px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+body {
+  display: flex;
+  margin: auto auto auto auto;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: comic sans ms;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="overflow">
+            “Cowards die many times before their deaths; The valiant never taste of death but once. Of
+            all the wonders that I yet have heard, It seems to me most strange that men should fear;
+            Seeing that death, a necessary end, Will come when it will come.” ― William Shakespeare,
+            Julius Caesar
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 2</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas id="paper" width="500" height="500"></canvas>
+</body>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("paper");
+        c = canvas.getContext("2d");
+
+        c.fillStyle = "black";
+        c.fillRect(0,0,canvas.width, canvas.height);
+
+        c.fillStyle = "red";
+        c.fillRect(20,20,50,50);
+
+        // we will apply stroke
+        c.strokeStyle = "white";
+        c.lineWidth = 10;
+        c.strokeRect(20,20,50,50);
+
+        // now we will draw lines
+        c.strokeStyle = "#7e9fc2";
+        c.lineWidth = 5;
+
+        c.beginPath();
+        c.moveTo(100,100);
+        c.lineTo(150,200);
+        c.lineTo(200,200);
+        c.lineTo(200,450);
+        c.closePath();
+        c.fill();
+        c.stroke();
+
+        // now we will try to write some texts
+        c.fillStyle = "white";
+        c.font = "20px Helvetica";
+        c.fillText("Hey rituraj", 200,200);
+
+        // draw circle
+        c.beginPath();
+        c.arc(300,300,50,0,Math.PI*2, false);
+        c.fill();
+
+    }
+</script>
+</html>

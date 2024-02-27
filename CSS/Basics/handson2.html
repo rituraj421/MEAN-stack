@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+</head>
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+  color: white;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #008cba;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 20px;
+  background-color: #f1f1f1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.button:focus + .content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.button:focus {
+  background-color: #008cba;
+}
+
+.content h2 {
+  color: #333;
+}
+
+.content p {
+  color: #555;
+}
+
+</style>
+<body>
+    <div class="menu">
+        <div tabindex="0" class="button">Home</div>
+        <div class="content">
+            “A house is made of bricks and beams. A home is made of hopes and dreams. Home is where our story begins…”
+        </div>
+        <div tabindex="0" class="button">Contact</div>
+        <div class="content">
+            “Contacts added but not one is worthy enough to remain as their priority.”
+        </div>
+        <div tabindex="0" class="button">About</div>
+        <div class="content">
+            “To be yourself in a world that is constantly trying to make you something else is the greatest
+            accomplishment.”
+        </div>
+    </div>
+</body>
+
+</html>
